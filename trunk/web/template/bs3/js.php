@@ -25,14 +25,6 @@ or
 -->
 <script>
 $(document).ready(function(){
-  var msg="<marquee style='margin-top:10px' id=broadcast direction='left' scrollamount=3 scrolldelay=50 onMouseOver='this.stop()'"+
-      " onMouseOut='this.start()' class=toprow>"+<?php echo json_encode($view_marquee_msg); ?>+"</marquee>";
-  $(".jumbotron").prepend(msg);
-  $("form").append("<div id='csrf' />");
-  $("#csrf").load("<?php echo $path_fix?>csrf.php");
-  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
-  $("body").append("<div class=center > <img src='http://hustoj.com/wx.jpg' width='120px'><img src='http://hustoj.com/alipay.png' width='120px'><br> 欢迎关注微信公众号onlinejudge</div>");
-});
 
 $(".hint pre").each(function(){
 	var plus="<span class='glyphicon glyphicon-plus'>Click</span>";

@@ -18,7 +18,6 @@
 
   <li><a class='btn btn-danger' href="../status.php" target="_top" title="<?php echo $MSG_HELP_SEEOJ?>"><b><?php echo $MSG_SEEOJ?></b></a>
   <?php if (isset($_SESSION[$OJ_NAME.'_'.'administrator'])){?>
-  <li><a class='btn btn-primary' href="setmsg.php" target="main" title="<?php echo $MSG_HELP_SETMESSAGE?>"><b><?php echo $MSG_SETMESSAGE?></b></a>
   <li><a class='btn btn-primary' href="news_list.php" target="main" title="<?php echo $MSG_HELP_NEWS_LIST?>"><b><?php echo $MSG_NEWS.$MSG_LIST?></b></a>
   <li><a class='btn btn-primary' href="news_add_page.php" target="main" title="<?php echo $MSG_HELP_ADD_NEWS?>"><b><?php echo $MSG_ADD.$MSG_NEWS?></b></a>
   <li><a class='btn btn-primary' href="user_list.php" target="main" title="<?php echo $MSG_HELP_USER_LIST?>"><b><?php echo $MSG_USER.$MSG_LIST?></b></a>
@@ -42,7 +41,7 @@
   <li><a class='btn btn-success' href="problem_import.php" target="main" title="<?php echo $MSG_HELP_IMPORT_PROBLEM?>"><b><?php echo $MSG_IMPORT.$MSG_PROBLEM?></b></a>
   <li><a class='btn btn-success' href="problem_export.php" target="main" title="<?php echo $MSG_HELP_EXPORT_PROBLEM?>"><b><?php echo $MSG_EXPORT.$MSG_PROBLEM?></b></a>
   <?php }?>
-  <li><a class='btn btn-success' href="https://github.com/zhblue/freeproblemset/" target="_blank"><b>FreeProblemSet</b></a>
+  
   <?php 
   if (isset($_SESSION[$OJ_NAME.'_'.'administrator'])||isset($_SESSION[$OJ_NAME.'_'.'contest_creator'])){?>
   <li><a class='btn btn-warning' href="contest_list.php" target="main"  title="<?php echo $MSG_HELP_CONTEST_LIST?>"><b><?php echo $MSG_CONTEST.$MSG_LIST?></b></a>
@@ -55,16 +54,6 @@
   if (isset($_SESSION[$OJ_NAME.'_'.'administrator'])){?>
   <li><a class='btn btn-primary' href="rejudge.php" target="main" title="<?php echo $MSG_HELP_REJUDGE?>"><b><?php echo $MSG_REJUDGE?></b></a>
   <?php }?>
-  <li><a class='btn btn-primary' href="https://github.com/zhblue/hustoj/" target="_blank"><b>HUSTOJ</b></a>
-  <?php
-  if (isset($_SESSION[$OJ_NAME.'_'.'administrator'])){?>
-  <li><a class='btn btn-primary' href="update_db.php" target="main" title="<?php echo $MSG_HELP_UPDATE_DATABASE?>"><b><?php echo $MSG_UPDATE_DATABASE?></b></a>
-  <?php }
-  if (isset($OJ_ONLINE)&&$OJ_ONLINE){?>
-  <li><a class='btn btn-primary' href="../online.php" target="main"><b><?php echo $MSG_ONLINE?></b></a>
-  <?php }?>
-  <li><a class='btn btn-primary' href="http://tk.hustoj.com" target="_blank"><b>自助题库</b></a>
-  <li><a class='btn btn-primary' href="http://shang.qq.com/wpa/qunwpa?idkey=d52c3b12ddaffb43420d308d39118fafe5313e271769277a5ac49a6fae63cf7a" target="_blank">手机QQ加官方群23361372</a>
 	
 </ol>
 <?php if (isset($_SESSION[$OJ_NAME.'_'.'administrator'])&&!$OJ_SAE){
